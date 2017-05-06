@@ -1,7 +1,7 @@
 defmodule Coherence.Mixfile do
   use Mix.Project
 
-  @version "0.3.1"
+  @version "0.4.0-dev"
 
   def project do
     [ app: :coherence,
@@ -35,12 +35,12 @@ defmodule Coherence.Mixfile do
   defp deps do
     [
       {:ecto, "~> 2.0"},
-      {:comeonin, "~> 2.4"},
-      {:phoenix, "~> 1.2"},
+      {:comeonin, "~> 3.0"},
+      {:phoenix, "~> 1.3.0-rc", override: true},
       {:phoenix_html, "~> 2.6"},
       {:gettext, "~> 0.11"},
       {:uuid, "~> 1.0"},
-      {:phoenix_swoosh, "~> 0.1.3"},
+      {:phoenix_swoosh, github: "dsignr/phoenix_swoosh", branch: "phx-1.3", override: true},
       {:timex, "~> 3.0"},
       {:timex_ecto, "~> 3.0"},
       {:floki, "~> 0.8", only: :test},
